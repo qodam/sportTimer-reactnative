@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Service au premier plan pendant la séance -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- Android 13+ : nécessaire pour afficher la carte de séance -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Garde le processeur éveillé écran éteint, pour changer de phase à l'heure -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+        <service
+            android:name="expo.modules.sessionservice.SessionForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Workout interval timer: shows the current phase (work / rest) and a live countdown while the app is in the background, and alerts the user at each phase change." />
+        </service>
+    </application>
+</manifest>

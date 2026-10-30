@@ -1,0 +1,7 @@
+{
+  "name": "session-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Service Android au premier plan : affiche la séance en cours (phase + compte à rebours) quand l'appli est en arrière-plan.",
+  "main": "index.ts"
+}

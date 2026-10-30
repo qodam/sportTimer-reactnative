@@ -1,0 +1,72 @@
+{
+  "common": {
+    "history": "History",
+    "seconds": "s",
+    "minutes": "min",
+    "noLimit": "No limit",
+    "rounds": {
+      "one": "%{count} round",
+      "other": "%{count} rounds"
+    },
+    "roundsUnit": "rounds",
+    "intervalOf": "Interval %{current} of %{total}",
+    "timeLeft": "%{time} left",
+    "duration": "Duration %{time}"
+  },
+  "home": {
+    "modeIntervals": "Work / rest",
+    "modeChrono": "Free timer",
+    "work": "Work",
+    "rest": "Rest",
+    "total": "Total time",
+    "summary": "%{count} intervals · %{work} of work",
+    "less": "%{label} minus %{step} %{unit}",
+    "more": "%{label} plus %{step} %{unit}",
+    "beep": "3-2-1 beep",
+    "awake": "Screen on",
+    "start": "Start"
+  },
+  "session": {
+    "ready": "READY?",
+    "work": "WORK",
+    "rest": "REST",
+    "cancel": "Cancel",
+    "skip": "Skip",
+    "skipA11y": "Skip the countdown",
+    "restart": "Restart",
+    "finish": "Finish",
+    "hold": "%{action}, hold",
+    "pause": "Pause",
+    "resume": "Resume",
+    "addRound": "Add a round",
+    "removeRound": "Remove a round",
+    "pauseShort": "Pause"
+  },
+  "end": {
+    "intervalsDone": "%{done} of %{total} intervals",
+    "home": "Back to home",
+    "ok": "OK"
+  },
+  "history": {
+    "thisWeek": "THIS WEEK",
+    "earlier": "EARLIER",
+    "sessions": {
+      "one": "session",
+      "other": "sessions"
+    },
+    "chrono": "Timer",
+    "delete": "Delete",
+    "deleteA11y": "Delete this session",
+    "emptyTitle": "No sessions yet",
+    "emptyText": "Finish a session and it will show up here.",
+    "days": ["M", "T", "W", "T", "F", "S", "S"],
+    "dayDone": "Workout done",
+    "dayEmpty": "No workout"
+  },
+  "notifications": {
+    "channel": "Workout in progress",
+    "chrono": "FREE TIMER",
+    "paused": "Paused",
+    "done": "Session complete"
+  }
+}

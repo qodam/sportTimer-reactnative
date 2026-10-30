@@ -1,0 +1,72 @@
+{
+  "common": {
+    "history": "Historique",
+    "seconds": "s",
+    "minutes": "min",
+    "noLimit": "Sans limite",
+    "rounds": {
+      "one": "%{count} round",
+      "other": "%{count} rounds"
+    },
+    "roundsUnit": "rounds",
+    "intervalOf": "Intervalle %{current} sur %{total}",
+    "timeLeft": "%{time} restantes",
+    "duration": "Durée %{time}"
+  },
+  "home": {
+    "modeIntervals": "Effort / repos",
+    "modeChrono": "Chrono libre",
+    "work": "Effort",
+    "rest": "Repos",
+    "total": "Durée totale",
+    "summary": "%{count} intervalles · %{work} d’effort",
+    "less": "%{label} moins %{step} %{unit}",
+    "more": "%{label} plus %{step} %{unit}",
+    "beep": "Bip 3-2-1",
+    "awake": "Écran allumé",
+    "start": "Démarrer"
+  },
+  "session": {
+    "ready": "PRÊT ?",
+    "work": "EFFORT",
+    "rest": "REPOS",
+    "cancel": "Annuler",
+    "skip": "Passer",
+    "skipA11y": "Passer la mise en place",
+    "restart": "Recommencer",
+    "finish": "Terminer",
+    "hold": "%{action}, maintenir",
+    "pause": "Mettre en pause",
+    "resume": "Reprendre",
+    "addRound": "Ajouter un round",
+    "removeRound": "Retirer un round",
+    "pauseShort": "Pause"
+  },
+  "end": {
+    "intervalsDone": "%{done} intervalles sur %{total}",
+    "home": "Retour à l’accueil",
+    "ok": "OK"
+  },
+  "history": {
+    "thisWeek": "CETTE SEMAINE",
+    "earlier": "AVANT",
+    "sessions": {
+      "one": "séance",
+      "other": "séances"
+    },
+    "chrono": "Chrono",
+    "delete": "Supprimer",
+    "deleteA11y": "Supprimer la séance",
+    "emptyTitle": "Aucune séance",
+    "emptyText": "Termine une séance, elle s’affichera ici.",
+    "days": ["L", "M", "M", "J", "V", "S", "D"],
+    "dayDone": "Séance faite",
+    "dayEmpty": "Pas de séance"
+  },
+  "notifications": {
+    "channel": "Séance en cours",
+    "chrono": "CHRONO LIBRE",
+    "paused": "En pause",
+    "done": "Séance terminée"
+  }
+}
