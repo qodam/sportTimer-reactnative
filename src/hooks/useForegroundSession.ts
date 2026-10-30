@@ -13,11 +13,11 @@ interface Actions {
 }
 
 /**
- * Carte de séance Android (service au premier plan) pendant toute la séance :
+ * Carte de séance hors de l'appli pendant toute la séance :
  *  - le programme est renvoyé au service à chaque changement (pause, reprise, recommencer…) ;
  *  - les boutons de la carte pilotent la séance ;
  *  - la carte disparaît quand on quitte l'écran de séance.
- * Ne fait rien sur iPhone ni dans Expo Go.
+ * Android : service au premier plan. iPhone : Live Activity. Rien dans Expo Go.
  */
 export function useForegroundSession(
   session: ActiveSession,

@@ -1,7 +1,9 @@
 /**
- * Service de séance au premier plan (Android).
- * Sur iPhone (et dans Expo Go), le module natif n'existe pas : toutes les
- * fonctions ne font simplement rien.
+ * Carte de séance affichée hors de l'appli :
+ *  - Android : service au premier plan (carte dans le volet) ;
+ *  - iPhone  : Live Activity (écran verrouillé + Dynamic Island).
+ * Dans Expo Go, le module natif n'existe pas : toutes les fonctions ne font
+ * simplement rien.
  */
 import { requireOptionalNativeModule } from "expo-modules-core";
 import { PermissionsAndroid, Platform } from "react-native";
@@ -47,7 +49,7 @@ const native =
   requireOptionalNativeModule<NativeSessionService>("SessionService");
 
 export const SessionService = {
-  /** false sur iPhone et dans Expo Go */
+  /** false dans Expo Go */
   isAvailable: native != null,
 
   /** Démarre la carte de séance, ou la met à jour si elle est déjà affichée. */

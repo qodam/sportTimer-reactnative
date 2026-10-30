@@ -7,7 +7,13 @@
     "scheme": "pushpause",
     "userInterfaceStyle": "dark",
     "ios": {
-      "icon": "./assets/icon_ios.png"
+      "icon": "./assets/icon_ios.png",
+      "bundleIdentifier": "com.codinghub.pushpause",
+      "appleTeamId": "TON_TEAM_ID",
+      "infoPlist": {
+        "NSSupportsLiveActivities": true,
+        "UIBackgroundModes": ["audio"]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -32,7 +38,8 @@
         }
       ],
       "expo-image",
-      "expo-localization"
+      "expo-localization",
+      "@bacons/apple-targets"
     ],
     "experiments": {
       "typedRoutes": true,

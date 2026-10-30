@@ -1,5 +1,6 @@
 import { AudioPlayer, setAudioModeAsync, useAudioPlayer } from "expo-audio";
 import { useCallback, useEffect } from "react";
+import { Platform } from "react-native";
 
 /** Bip court (3-2-1) et bip long (changement de phase). */
 export function useBeeps(enabled: boolean) {
@@ -7,8 +8,14 @@ export function useBeeps(enabled: boolean) {
   const long = useAudioPlayer(require("@/assets/sounds/bip-long.wav"));
 
   useEffect(() => {
-    // Les bips sonnent même si le téléphone est en mode silencieux (iPhone).
-    setAudioModeAsync({ playsInSilentMode: true }).catch(() => {});
+    setAudioModeAsync({
+      // Les bips sonnent même si le téléphone est en mode silencieux (iPhone).
+      playsInSilentMode: true,
+      // iPhone : les bips continuent hors de l'appli (Android : c'est le service qui bipe).
+      shouldPlayInBackground: Platform.OS === "ios",
+      // Par-dessus ta musique, sans la couper
+      interruptionMode: "mixWithOthers",
+    }).catch(() => {});
   }, []);
 
   const play = useCallback(

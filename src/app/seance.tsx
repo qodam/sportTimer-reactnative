@@ -4,6 +4,7 @@ import { IntervalView } from "@/src/components/session/IntervalView";
 import { PrepView } from "@/src/components/session/PrepView";
 import { useTheme } from "@/src/contexts/ThemeContext";
 import { useTimer } from "@/src/contexts/TimerContext";
+import { useBackgroundAudio } from "@/src/hooks/useBackgroundAudio";
 import { useForegroundSession } from "@/src/hooks/useForegroundSession";
 import { useScreenAwake } from "@/src/hooks/useScreenAwake";
 import { useSessionClock } from "@/src/hooks/useSessionClock";
@@ -28,6 +29,7 @@ function RunningSession({ session }: { session: ActiveSession }) {
 
   useSessionFeedback(clock, session.running, session.beep);
   useScreenAwake(session.keepAwake);
+  useBackgroundAudio(session.running); // iPhone : reste éveillée hors de l'appli
 
   // Fin auto et appui sur « Terminer » peuvent arriver presque en même temps
   const leaving = useRef(false);
