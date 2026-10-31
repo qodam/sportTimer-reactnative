@@ -12,7 +12,9 @@
       "appleTeamId": "TON_TEAM_ID",
       "infoPlist": {
         "NSSupportsLiveActivities": true,
-        "UIBackgroundModes": ["audio"]
+        "UIBackgroundModes": [
+          "audio"
+        ]
       }
     },
     "android": {
@@ -45,6 +47,24 @@
       "typedRoutes": true,
       "reactCompiler": true
     },
-    "backgroundColor": "#15171C"
+    "backgroundColor": "#15171C",
+    "extra": {
+      "router": {},
+      "eas": {
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "bundleIdentifier": "com.codinghub.pushpause.widget",
+                  "targetName": "PushPauseActivity"
+                }
+              ]
+            }
+          }
+        },
+        "projectId": "444e4abf-3f01-47ff-a30a-1aa2204f9ba6"
+      }
+    }
   }
 }
